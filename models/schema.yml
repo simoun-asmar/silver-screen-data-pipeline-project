@@ -1,0 +1,165 @@
+version: 2
+
+models:
+  - name: stg_clean_movie_catalogue
+    description: Contains a list of movies with details such as title, genre, and studio.
+    columns:
+      - name: movie_id
+        description: Unique identifier for each movie. Primary key.
+        tests:
+          - unique   # Ensures movie_id is always unique 
+          - not_null   # Ensures movie_id is never null
+
+
+          
+  - name: fact_monthly_ticket_revenue_nj001
+    description: Aggregated view for monthly revenue from selling tickets by movie_id and month for the Location (NJ001).
+    columns:
+      - name: movie_id
+        description: Movie identifier.
+        tests:
+          - not_null   # Ensures movie_id is never null
+
+
+
+  - name: fact_monthly_ticket_revenue_nj002
+    description: Aggregated view for monthly revenue from selling tickets by movie_id and month for the Location (NJ002).
+    columns:
+      - name: movie_id
+        description: Movie identifier.
+        tests:
+          - not_null   # Ensures movie_id is never null
+
+
+
+  - name: fact_monthly_ticket_revenue_nj003
+    description: Aggregated view for monthly revenue from selling tickets by movie_id and month for the Location (NJ003).
+    columns:
+      - name: movie_id
+        description: Movie identifier.
+        tests: 
+          - not_null     # Ensures movie_id is never null
+
+
+      
+  - name: int_all_location_rental_cost
+    description: Aggregated view for monthly rental cost for each movie_id by month for each location.
+    columns:
+      - name: movie_id
+        description: Movie identifier.Foreign key referencing stg_clean_movie_catalogue.
+        tests:
+          - not_null      # Ensures movie_id is never null
+          - relationships:
+              field: movie_id
+              to: ref('stg_clean_movie_catalogue')
+              
+      - name: location
+        description: Location identifier.
+        tests:
+          - accepted_values:
+              values:
+                - "NJ_001"
+                - "NJ_002"
+                - "NJ_003"
+
+
+
+
+
+  - name: int_all_location_ticket_revenue
+    description: Aggregated Table that shows the revenue from selling tickets by movie_id and month for all three locations.
+    columns:
+      - name: movie_id
+        description: Movie identifier.Foreign key referencing stg_clean_movie_catalogue.
+        tests:
+          - not_null   # Ensures movie_id is never null
+          - relationships:
+              field: movie_id
+              to: ref('stg_clean_movie_catalogue')
+
+
+  - name: int_combined_rental_cost_and_revenue
+    description: >
+      This model combines rental cost data from `int_all_location_rental_cost` with 
+      revenue and ticket sales data from `int_all_location_ticket_revenue`. 
+      It ensures that rental costs and revenue are aligned at the **monthly, movie, 
+      and location level** before being used in the final reporting model.
+    columns:
+      - name: movie_id
+        description: "Unique identifier for each movie."
+        tests:
+          - not_null
+          - relationships:
+              field: movie_id   # Ensures that movie_id exists in the movie catalog
+              to: ref('stg_clean_movie_catalogue')
+
+
+
+  - name: mart_final_movie_revenue
+    description: >
+      This table provides a monthly summary of movie performance across all locations.
+      It combines data from ticket sales, rental costs, and movie details to give a 
+      comprehensive view of each movie`s financial performance
+
+      The data is structured at a monthly granularity, ensuring each movie's 
+      financial performance is tracked at the movie-location-month level.
+
+      Key business insights provided:
+      - Monthly revenue generated per movie per location
+      - Total tickets sold for each movie
+      - Rental cost incurred per location
+      - Trends in movie profitability across different theaters
+
+      This model is used by management and analysts to track movie performance, 
+      optimize pricing strategies, and evaluate rental cost efficiency.
+
+    columns:
+      - name: movie_id
+        description: "Unique identifier for each movie."
+        tests:
+          - not_null  
+
+      - name: title
+        description: "The title of the movie."
+        tests:
+          - not_null  
+
+      - name: genre
+        description: "The genre of the movie (e.g., Action, Comedy, Drama)."
+        tests:
+          - not_null  
+
+      - name: studio
+        description: "The studio that produced the movie."
+        tests:
+          - not_null  
+
+      - name: month
+        description: "The month for which revenue and rental cost data is aggregated."
+        tests:
+          - not_null  
+
+      - name: location
+        description: "The location where the movie was screened."
+        tests:
+          - not_null  
+
+      - name: rental_cost
+        description: >
+          The cost paid by the theater to rent the movie for the given month.
+          Can be NULL if rental data is not available.
+          Validation tests for this column are implemented in the `tests/` folder.
+
+      - name: tickets_sold
+        description: >
+          The total number of tickets sold for a movie at a specific location and month.
+          This value is calculated by summing up all ticket sales from different showtimes of the movie.
+          Validation tests for this column are implemented in the `tests/` folder.
+
+      - name: revenue
+        description: >
+          Total revenue generated from ticket sales for the movie in a given month and location.
+          This metric helps assess movie profitability at each theater.
+          Validation tests for this column are implemented in the `tests/` folder.
+
+
