@@ -1,0 +1,20 @@
+version: 2
+sources:
+  - name: SILVER_SCREEN
+    database: SILVER_SCREEN
+    schema: PUBLIC
+    tables:
+      - name: INVOICES
+        description: table contains detailed information about movies released in 2024
+         and rented out by “Silver Screen”.
+      - name: MOVIE_CATALOGUE
+        description: invoices for movie screenings at various theaters over different months,
+         provided by “Silver Screen” accountants.
+      - name: NJ_001
+        description: information on all transactions from location N1
+      - name: NJ_002
+        description: 
+           daily sales information from location location N2
+      - name: NJ_003
+        description: tracks individual purchases from location N3, 
+          covering various product types such as tickets, snacks, and drinks.
