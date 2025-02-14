@@ -13,8 +13,10 @@ This folder contains **intermediate models** that unify, clean, and aggregate da
 - 📄 [int_combined_rental_cost_and_revenue.sql](int_combined_rental_cost_and_revenue.sql) – **Joins** rental cost and ticket revenue into a single dataset.
 
 ##  How These Models Work:
-- **Data Sources:** Built using fact models like `fact_monthly_ticket_revenue_nj001`, `fact_monthly_ticket_revenue_nj002`, etc.
-- **Transformation:** Uses **aggregation** (`SUM()`), **date standardization** (`DATE_TRUNC('month', date)`), and **joins** to unify data.
-- **Feeds into Final Reporting:** The `int_combined_rental_cost_and_revenue.sql` model is used as input for the **final mart model**.
+- **Data Sources:** These models reference fact models such as `fact_monthly_ticket_revenue_nj001`, `fact_monthly_ticket_revenue_nj002`, etc., using the **dbt `ref` function** to maintain dependencies.
+- **Transformation Techniques:** 
+  - **Aggregation:** Uses `SUM()` to calculate totals for rental costs and ticket sales.
+  - **Date Standardization:** Applies `DATE_TRUNC('month', date)` to ensure uniform monthly granularity.
+  - **Joins:** Merges rental cost and ticket revenue data to create a single structured dataset.
 
 ➡️ **[See the Next Step in the Process](../../README.md)** 🔗
