@@ -1,7 +1,7 @@
 WITH monthly_revenue_nj001 AS (
 
     SELECT 
-        DATE_TRUNC('month', timestamp) AS month,  -- Get the month from the full timestamp
+        {{ month_trunc('timestamp') }} AS month,  -- Apply the month_trunc macro to truncate the 'timestamp' to the month level
         movie_id,                                
         SUM(ticket_amount) AS tickets_sold,      -- Total number of tickets sold that month
         SUM(transaction_total) AS revenue        -- Total revenue made from ticket sales
@@ -12,4 +12,4 @@ WITH monthly_revenue_nj001 AS (
     ORDER BY month                               -- Sort by month so it’s easier to analyze trends
 )
 
-SELECT * FROM monthly_revenue_nj001           
+SELECT * FROM monthly_revenue_nj001  
