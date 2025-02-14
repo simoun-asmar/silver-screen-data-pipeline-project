@@ -1,4 +1,4 @@
-# 🏛 Facts Models – Monthly Ticket Revenue  
+# Facts Models – Monthly Ticket Revenue  
 
 This folder contains **fact models** that aggregate **monthly ticket revenue** for each Silver Screen theater location. These models transform raw transaction data from different sources into structured and aggregated datasets.  
 
