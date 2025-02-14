@@ -8,4 +8,4 @@ This folder contains **custom dbt macros** that are used across different models
 
 These macros improve **code reusability** and ensure **consistent transformations** across models.
 
-📂 **[View Macros Folder](../macros)**
+📂 **[View Macros Folder](../macros.sql)**
