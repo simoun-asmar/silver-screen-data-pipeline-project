@@ -1,7 +1,7 @@
 WITH monthly_revenue_nj002 AS (
 
     SELECT 
-        DATE_TRUNC('month', date) AS month,  -- Get the month from the full date
+        {{ month_trunc('date') }} AS month,  -- Apply the month_trunc macro to truncate column 'date' to the month level
         movie_id,                           
         SUM(ticket_amount) AS tickets_sold, -- Total number of tickets sold that month
         SUM(total_earned) AS revenue        -- Total revenue made from ticket sales
