@@ -25,5 +25,5 @@ This folder contains **intermediate models** that unify, clean, and aggregate da
   - **Date Standardization:** Applies `DATE_TRUNC('month', date)` to ensure uniform monthly granularity.  
   - **Joins:** Merges rental cost and ticket revenue data to create a single structured dataset.
 
-➡️ **[Next Model](../marts)** 🔗  
+➡️ **[Next Model](../marts/README.md)** 🔗  
 _Click the link above to explore the next transformation step._
