@@ -34,5 +34,5 @@ This model aggregates **ticket sales and revenue** for **NJ_003**, using data fr
 - **Filtering**: The NJ_003 dataset required **filtering** to exclude non-ticket transactions before aggregation.  
 - **Consistency**: Since different locations had different data formats, transformations ensured uniformity across all models.  
 
-➡️ **[Next Model](../intermediate)** 🔗  
+➡️ **[Next Model](../intermediate/README.md)** 🔗  
 _Click the link above to explore the next transformation step._  
