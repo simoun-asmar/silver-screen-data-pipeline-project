@@ -19,5 +19,7 @@ This folder contains **fact models** that aggregate **monthly ticket revenue** f
 - **Consistency**: Since different locations had different data formats, transformations ensured uniformity across all models.  
 
 
+
  
-➡️ **[See the Next Step in the Process](../../README.md)** 🔗  
+➡️ **[Next Model](../intermediate)** 🔗  
+_Click the link above to explore the next transformation step._
