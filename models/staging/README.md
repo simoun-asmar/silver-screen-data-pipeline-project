@@ -9,13 +9,18 @@ The staging layer ensures **data consistency, handles missing values, and standa
 - **Handles missing values** using the `fill_nulls` macro to replace `NULL` values with `'Unknown'`.
 - **References the source table** `SILVER_SCREEN.MOVIE_CATALOGUE` to ensure a structured extraction.
 
-##  Model in This Folder:
-- 📄 [`stg_clean_movie_catalogue.sql`](stg_clean_movie_catalogue.sql) – Cleans and prepares movie metadata.
+## 📄 Model in This Folder:
+- [`stg_clean_movie_catalogue.sql`](stg_clean_movie_catalogue.sql) – Cleans and prepares movie metadata.
+
+This is how the **stg_clean_movie_catalogue** model is structured in dbt:
+  
+![stg_clean_movie_catalogue](images/stg_clean_movie_catalogue.png)
 
 ##  How This Model Works:
 - **Source Data**: Uses `{{ source('SILVER_SCREEN', 'MOVIE_CATALOGUE') }}` to extract movie details.
 - **Macro Usage**: Applies `fill_nulls('genre')` and `fill_nulls('rating')` to ensure no missing values.
 - **Data Cleaning**: Ensures movie details are structured and ready for further processing.
 
-➡️ **[Next Model](../facts/)** 🔗  
+➡️ **[Next Model](../facts)** 🔗  
 _Click the link above to explore the next transformation step._
+
