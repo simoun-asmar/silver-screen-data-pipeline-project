@@ -2,6 +2,15 @@
 
 This folder contains **visual representations** of the transformed data stored in Snowflake after running dbt models. The transformations performed in dbt resulted in the creation of **Tables** and **Views**, which serve as the foundation for further analysis.
 
+##  **DBT Build Execution**
+Before moving into the DAG and final tables, we ran **dbt build**, which executed and tested all models successfully.  
+Below are the results of the build process:
+
+![DBT Build - Step 1](../dbt-build1.png)  
+![DBT Build - Step 2](../dbt-build2.png)
+
+---
+
 ##  **Data Flow Overview (DAG)**
 To understand how data flows through this pipeline, refer to the **DAG (Directed Acyclic Graph) below**. This diagram outlines how raw data from **Silver Screen's sources** is processed step-by-step through **staging, transformation, and final reporting layers** before undergoing testing.
 
