@@ -17,5 +17,5 @@ The staging layer ensures **data consistency, handles missing values, and standa
 - **Macro Usage**: Applies `fill_nulls('genre')` and `fill_nulls('rating')` to ensure no missing values.
 - **Data Cleaning**: Ensures movie details are structured and ready for further processing.
 
-➡️ **[Next Model](facts/)** 🔗  
+➡️ **[Next Model](./facts/)** 🔗  
 _Click the link above to explore the next transformation step._
