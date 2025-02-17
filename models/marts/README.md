@@ -19,4 +19,5 @@ This folder contains the **final mart model**, which aggregates all relevant dat
   - Ensures **location consistency** by using `revenue.location` instead of `rental.location`, avoiding missing data.
   - Orders data by **movie_id, month, and location** for structured reporting.
 
-➡️ **[See the Next Step in the Process](../../README.md)** 🔗  
+➡️ **[Proceed to Testing the Models](../../test/)** 🔗  
+_This link takes you to the next step in the process, where we validate the models using custom tests to ensure data accuracy and consistency._
