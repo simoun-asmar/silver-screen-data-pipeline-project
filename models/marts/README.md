@@ -7,8 +7,10 @@ This folder contains the **final mart model**, which aggregates all relevant dat
 - **Summarizes** monthly **revenue, tickets sold, and rental costs** per movie per location and per month.
 - **Ensures completeness** by including all movies, even if rental cost data is missing.
 
-##  Model in This Folder:
-- 📄 [mart_final_movie_revenue.sql](mart_final_movie_revenue.sql) - The final table summarizing **rental costs, ticket sales, and revenue per movie, per location, and per month**.
+## 📄 Model in This Folder:
+
+- [`mart_final_movie_revenue.sql`](mart_final_movie_revenue.sql) - The final table summarizing **rental costs, ticket sales, and revenue per movie, per location, and per month**.  
+  ![mart_final_movie_revenue](images/mart_final_movie_revenue.png)
 
 ##  How This Model Works:
 - **Data Sources**:
@@ -19,5 +21,5 @@ This folder contains the **final mart model**, which aggregates all relevant dat
   - Ensures **location consistency** by using `revenue.location` instead of `rental.location`, avoiding missing data.
   - Orders data by **movie_id, month, and location** for structured reporting.
 
-➡️ **[Proceed to Testing the Models](../../test/)** 🔗  
+➡️ **[Proceed to Testing the Models](../../test/README.md)** 🔗  
 _This link takes you to the next step in the process, where we validate the models using custom tests to ensure data accuracy and consistency._
