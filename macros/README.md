@@ -14,5 +14,5 @@ These macros improve **code reusability** and ensure **consistent transformation
 📄 **[View macros.sql](macros.sql)**  
 _Click the link above to see the macro definitions._
 
-➡️ **[See the Next Step in the Process](../models)** 🔗  
+➡️ **[See the Next Step in the Process](../models/README.md)** 🔗  
 _Click the link above to explore the models creation process._
