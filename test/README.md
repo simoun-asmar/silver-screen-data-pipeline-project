@@ -22,7 +22,7 @@ This folder contains **custom SQL tests** to ensure data integrity in the `mart_
 
 ### ✅ Test Execution Result:
 The image below shows that all tests ran successfully, confirming data integrity in our final model.  
-![dbt test result](images/dbt test.png)
+![dbt test result](images/dbt-test.png)
 
 ##  How These Tests Work:
 - **Validation Queries:** These tests run SQL queries on `mart_final_movie_revenue` to detect invalid values.
