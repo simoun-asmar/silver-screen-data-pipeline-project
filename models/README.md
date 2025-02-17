@@ -17,10 +17,10 @@ The transformation process follows a structured pipeline, progressing through mu
 
 | Folder | Description |
 |---------|------------|
-| 📂 [**staging/**] | Cleans and standardizes raw source data before further transformations. |
-| 📂 [**facts/**] | Aggregates **monthly ticket revenue** for each location. |
-| 📂 [**intermediate/**] | Combines **rental costs and ticket revenue** into unified datasets. |
-| 📂 [**marts/**] | Final reporting tables summarizing **movie performance per location and month**. |
+| 📂 **staging/** | Cleans and standardizes raw source data before further transformations. |
+| 📂 **facts/** | Aggregates **monthly ticket revenue** for each location. |
+| 📂 **intermediate/** | Combines **rental costs and ticket revenue** into unified datasets. |
+| 📂 **marts/** | Final reporting tables summarizing **movie performance per location and month**. |
 
 ---
 
