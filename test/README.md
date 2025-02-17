@@ -17,4 +17,5 @@ This folder contains **custom SQL tests** to ensure data integrity in the `mart_
 - **Data Integrity Enforcement:** If any test fails, it indicates potential data quality issues.
 - **Reference to Final Model:** The tests use `{{ ref('mart_final_movie_revenue') }}` to dynamically check data.
 
-➡️ **[See the Next Step in the Process](../README.md)** 🔗
+➡️ **[View Snowflake Tables & Views](../snowflake/)** 🔗  
+_Explore the final tables and views generated in Snowflake as part of the data modeling and transformation process._
