@@ -8,8 +8,11 @@ This folder contains **custom dbt macros** that are used across different models
 
 These macros improve **code reusability** and ensure **consistent transformations** across models.
 
+##  Macros Overview:
+![Macros Overview](images/macros.png)
+
 📄 **[View macros.sql](macros.sql)**  
 _Click the link above to see the macro definitions._
 
-
-➡️ **[See the Next Step in the Process](./../README.md)** 🔗  
+➡️ **[See the Next Step in the Process](../models)** 🔗  
+_Click the link above to explore the models creation process._
