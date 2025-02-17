@@ -34,5 +34,5 @@ The transformation process follows a structured pipeline, progressing through mu
 
 ---
 
-➡️ **[Start with Staging Models](staging/)** 🔗  
+➡️ **[Start with Staging Models](staging/README.md)** 🔗  
 _Click the link above to begin exploring the first transformation step._
