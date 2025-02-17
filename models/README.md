@@ -7,8 +7,8 @@ This folder contains all **dbt models** used in the `Silver Screen` project. The
 ##  Schema & Sources
 The models rely on two key configuration files:
 
-- 📄 **[`schema.yml`](../schema.yml)** – Defines the **structure, relationships, and validation tests** for transformed models.
-- 📄 **[`silver_screen__sources.yml`](../silver_screen__sources.yml)** – Specifies **raw source tables** from the `SILVER_SCREEN` database, ensuring proper reference and consistency.
+- 📄 **[`schema.yml`](./schema.yml)** – Defines the **structure, relationships, and validation tests** for transformed models.
+- 📄 **[`silver_screen__sources.yml`](./silver_screen__sources.yml)** – Specifies **raw source tables** from the `SILVER_SCREEN` database, ensuring proper reference and consistency.
 
 ---
 
@@ -17,10 +17,10 @@ The transformation process follows a structured pipeline, progressing through mu
 
 | Folder | Description |
 |---------|------------|
-| 📂 [**staging**](staging/) | Cleans and standardizes raw source data before further transformations. |
-| 📂 [**facts**](facts/) | Aggregates **monthly ticket revenue** for each location. |
-| 📂 [**intermediate**](intermediate/) | Combines **rental costs and ticket revenue** into unified datasets. |
-| 📂 [**marts**](marts/) | Final reporting tables summarizing **movie performance per location and month**. |
+| 📂 [**staging/**] | Cleans and standardizes raw source data before further transformations. |
+| 📂 [**facts/**] | Aggregates **monthly ticket revenue** for each location. |
+| 📂 [**intermediate/**] | Combines **rental costs and ticket revenue** into unified datasets. |
+| 📂 [**marts/**] | Final reporting tables summarizing **movie performance per location and month**. |
 
 ---
 
