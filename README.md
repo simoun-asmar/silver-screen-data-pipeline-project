@@ -118,7 +118,7 @@ The **Silver Screen Movie Revenue Analysis** provides a **structured, automated,
 
 ###  **Explore the Full Project**  
 
-➡️ **[View the Full Project & Data Transformations](macros/)** 🔗  
+➡️ **[View the Full Project & Data Transformations](macros/README.md)** 🔗  
 _Click the link above to explore **all project components, including detailed data transformations, model explanations, and testing insights!**_ 
 
 ---
