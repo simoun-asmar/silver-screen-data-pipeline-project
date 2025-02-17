@@ -1,4 +1,4 @@
-# ✅ Test Folder – Data Validation
+#  Test Folder – Data Validation
 
 This folder contains **custom SQL tests** to ensure data integrity in the `mart_final_movie_revenue` model. These tests validate key business metrics and enforce quality checks on critical columns.
 
@@ -18,10 +18,16 @@ This folder contains **custom SQL tests** to ensure data integrity in the `mart_
 - 📝 [`test_tickets_sold_final_movie_revenue.sql`](test_tickets_sold_final_movie_revenue.sql) – Confirms `tickets_sold` is **greater than 0**, as ticket sales should always have a valid count.  
   ![test_tickets_sold_final_movie_revenue](images/test_tickets_sold_final_movie_revenue.png)
 
+---
+
+### ✅ Test Execution Result:
+The image below shows that all tests ran successfully, confirming data integrity in our final model.  
+![dbt test result](images/dbt test.png)
+
 ##  How These Tests Work:
 - **Validation Queries:** These tests run SQL queries on `mart_final_movie_revenue` to detect invalid values.
 - **Data Integrity Enforcement:** If any test fails, it indicates potential data quality issues.
 - **Reference to Final Model:** The tests use `{{ ref('mart_final_movie_revenue') }}` to dynamically check data.
 
-➡️ **[View Snowflake Tables & Views](../snowflake)** 🔗  
+➡️ **[View Snowflake Tables & Views](../snowflake/README.md)** 🔗  
 _Explore the final tables and views generated in Snowflake as part of the data modeling and transformation process._
