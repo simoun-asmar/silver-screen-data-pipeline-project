@@ -123,6 +123,13 @@ _Click the link above to explore **all project components, including detailed da
 
 ---
 
+## 🎥 Watch the Project Presentation
+
+If you'd like a deeper dive into how this project was built, check out my **full walkthrough video** where I explain the project objectives, data transformations, testing, and final results.
+
+👉 [**Watch the Presentation on YouTube**](https://www.youtube.com/watch?v=YqW_OO_hgaA&list=PLI2WrYassY19HbQ2iJh3oVjk_NXIf7z_9) 🎬✨
+
+
 ### 🙌 **Thank You for Exploring This Project!**  
 
 I appreciate your time reviewing this project. If you have any **feedback, suggestions, or questions**, feel free to reach out! 😊
